@@ -12,11 +12,11 @@ class Obsever {
                 enumerable: true,
                 get() {
                     Dep.target && dep.addSub(Dep.target)
-                    console.log('搜集以来')
+                    console.log('搜集依赖')
                     return val
                 },
                 set(newVal) {
-                    console.log('触发以来')
+                    console.log('触发依赖')
                     val = newVal
                     dep.notify()
                 }

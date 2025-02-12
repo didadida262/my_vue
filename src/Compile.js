@@ -13,6 +13,8 @@ class Compile {
     // 解析出{{}},变量赋值
     compile(fragment) {
         const nList = fragment.childNodes
+        console.log('nList>>>', nList)
+
         nList.forEach((node) => {
             const nType = node.nodeType
             if (nType === 3) {
